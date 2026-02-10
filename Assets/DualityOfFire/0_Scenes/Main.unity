@@ -1550,7 +1550,7 @@ Transform:
   m_GameObject: {fileID: 377030522}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.001291275, y: -0.271276, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1614,7 +1614,7 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 377030524}
-    PlayerPrefab: {fileID: 0}
+    PlayerPrefab: {fileID: 801905422963075028, guid: 60bcb0b7fc06d3d47b518520fba74fe1, type: 3}
     Prefabs:
       NetworkPrefabsLists:
       - {fileID: 11400000, guid: 85fbc08b8e26a4d4a9843ae5de3594a2, type: 2}
@@ -7891,7 +7891,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 539.4938, y: -666.6666}
+  m_AnchoredPosition: {x: 489.49573, y: -666.6666}
   m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &509629092518547519
@@ -8178,7 +8178,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 539.4938, y: -133.33331}
+  m_AnchoredPosition: {x: 489.49573, y: -133.33331}
   m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1451044228629532785
@@ -8331,18 +8331,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1722232604185496846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8449784777130517165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1831998920421888719
 GameObject:
   m_ObjectHideFlags: 0
@@ -9357,9 +9345,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8449784777130517166}
-        m_TargetAssemblyTypeName: LobbyManager, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 8669367087266389108}
+        m_TargetAssemblyTypeName: LocalNetworkUI, Assembly-CSharp
+        m_MethodName: StartHost
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9664,7 +9652,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3349024937370873245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 122e8f6f8b7081b43b5ea351627d6c8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fd41e123dfba044f9920f8cb98f3769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hostIP: 
@@ -11402,7 +11390,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4298677646657009640}
   - component: {fileID: 2260654678745323}
-  - component: {fileID: 1722232604185496846}
   - component: {fileID: 8449784777130517166}
   m_Layer: 0
   m_Name: LobbyManager
@@ -11420,7 +11407,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8449784777130517165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4422e7d18a7a55c418435bafa8bf253d, type: 3}
+  m_Script: {fileID: 11500000, guid: afec60b2533d8b54db82f3ddfcc8aa30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
@@ -11548,7 +11535,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &8669367087266389108
 MonoBehaviour:
@@ -11559,10 +11546,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8669367087266389107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ad290298621d20449f0f0fd955996de, type: 3}
+  m_Script: {fileID: 11500000, guid: 4817ee1f0ac4dd345bc67bfe0e59e0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiPanel: {fileID: 1320811903627612875}
+  uiPanel: {fileID: 1376837753}
   joinCodeInput: {fileID: 448838194844619137}
   nameInput: {fileID: 8247198952031632867}
   discoveryStatusText: {fileID: 1541844225342038304}
@@ -11837,7 +11824,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 539.4938, y: -400}
+  m_AnchoredPosition: {x: 489.49573, y: -400}
   m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9214230496328638659

@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 31981595548335816}
   - component: {fileID: 7257854556910303239}
   m_Layer: 6
-  m_Name: PlayerPrefab
+  m_Name: Network PlayerPrefab
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10271,8 +10271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6501458853077973994}
-  - component: {fileID: 4441599248847428780}
-  - component: {fileID: 1748367273773503469}
+  - component: {fileID: 8160802321595976402}
   m_Layer: 6
   m_Name: Script
   m_TagString: Untagged
@@ -10295,7 +10294,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2693272095284560657}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4441599248847428780
+--- !u!114 &8160802321595976402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10304,10 +10303,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2615002393960377467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d679010ed9c12e74f8fe91e61ce9f602, type: 3}
+  m_Script: {fileID: 11500000, guid: 1aaad6d395f4d5c4780a46fc427a3748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 6046735130291419842, guid: 2fbf204aec52a094cbd2288265872ed3, type: 3}
+  ShowTopMostFoldoutHeaderGroup: 1
+  bulletPrefab: {fileID: 6046735130291419842, guid: f17a1f60c8694f24ca94bd40be65a0d8, type: 3}
   firePoint: {fileID: 3209969316532230901}
   forcePoint: {fileID: 6029156849714044575}
   recoilForce: 2.2
@@ -10315,28 +10315,11 @@ MonoBehaviour:
   shootParticle: {fileID: 2534715395260708625}
   destroyParticle: {fileID: 8002304800437092719}
   audioSources: {fileID: 503238704850871745}
-  audioShootClips:
-  - {fileID: 8300000, guid: 5891abfca6b1feb4e90454a05bc0dc7d, type: 3}
-  - {fileID: 8300000, guid: 279a91e3006575d43a50d6a8468f1433, type: 3}
-  - {fileID: 8300000, guid: 92353f635d5535f4496436a7b562a312, type: 3}
-  fireCooldown: 0.3
+  audioShootClips: []
+  fireCooldown: 0.25
   maxHealth: 100
   playerHealthImg: {fileID: 0}
   playerDataScriptableObject: {fileID: 11400000, guid: 8a51ad2373e8b864ea1f424c13d91601, type: 2}
---- !u!114 &1748367273773503469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2615002393960377467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8564aacb638e61148bf7576438583208, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  nameTagText: {fileID: 4719886249861524725}
 --- !u!1 &3507073312147664158
 GameObject:
   m_ObjectHideFlags: 0
