@@ -189,12 +189,12 @@ public class LobbyManager : NetworkBehaviour
             // ---------- POSITION ----------
             if (i == 0) // Host → RIGHT (1.5, -2)
             {
-                player.transform.position = new Vector3(1.5f, -2f, 0f);
+                player.transform.position = new Vector3(1f, -2f, 0f);
                 Debug.Log($"👑 HOST spawning at RIGHT (1.5, -2)");
             }
             else // Client → LEFT (-1.5, -2)
             {
-                player.transform.position = new Vector3(-1.5f, -2f, 0f);
+                player.transform.position = new Vector3(-1f, -2f, 0f);
                 Debug.Log($"👤 CLIENT spawning at LEFT (-1.5, -2)");
             }
 
