@@ -170,54 +170,12 @@ public class LobbyManager : NetworkBehaviour
         }
     }
 
-    //public void StartGame()
-    //{
-    //    if (!IsServer) return;
-
-    //    Debug.Log("🎮 Starting game...");
-
-    //    uiPanel.SetActive(false);
-    //    HideUIClientRpc();
-
-    //    List<ulong> clients = new List<ulong>(NetworkManager.Singleton.ConnectedClientsIds);
-
-    //    for (int i = 0; i < clients.Count; i++)
-    //    {
-    //        ulong clientId = clients[i];
-    //        GameObject player = Instantiate(playerPrefab);
-
-    //        // ---------- POSITION ----------
-    //        if (i == 0) // Host → RIGHT (1.5, -2)
-    //        {
-    //            player.transform.position = new Vector3(1f, -2f, 0f);
-    //            Debug.Log($"👑 HOST spawning at RIGHT (1.5, -2)");
-    //        }
-    //        else // Client → LEFT (-1.5, -2)
-    //        {
-    //            player.transform.position = new Vector3(-1f, -2f, 0f);
-    //            Debug.Log($"👤 CLIENT spawning at LEFT (-1.5, -2)");
-    //        }
-
-    //        // ---------- FACING (flip sprite) ----------
-    //        Vector3 localScale = player.transform.localScale;
-    //        if (i == 0) // Host faces LEFT (toward client)
-    //            localScale.x = -Mathf.Abs(localScale.x);
-    //        else        // Client faces RIGHT (toward host)
-    //            localScale.x = Mathf.Abs(localScale.x);
-    //        player.transform.localScale = localScale;
-
-    //        // ---------- SPAWN ----------
-    //        NetworkObject netObj = player.GetComponent<NetworkObject>();
-    //        netObj.SpawnAsPlayerObject(clientId);
-
-    //        Debug.Log($"✅ Player {i} (ClientId: {clientId}) spawned at {player.transform.position} facing {(i == 0 ? "LEFT" : "RIGHT")}");
-    //    }
-    //}
-
     public void StartGame()
     {
         if (!IsServer) return;
+
         Debug.Log("🎮 Starting game...");
+
         uiPanel.SetActive(false);
         HideUIClientRpc();
 
@@ -229,22 +187,24 @@ public class LobbyManager : NetworkBehaviour
             GameObject player = Instantiate(playerPrefab);
 
             // ---------- POSITION ----------
-            if (i == 0) // Host → RIGHT (1, -2)
+            if (i == 0) // Host → RIGHT (1.5, -2)
             {
                 player.transform.position = new Vector3(1f, -2f, 0f);
-                Debug.Log($"👑 HOST spawning at RIGHT (1, -2)");
+                Debug.Log($"👑 HOST spawning at RIGHT (1.5, -2)");
             }
-            else // Client → LEFT (-1, -2)
+            else // Client → LEFT (-1.5, -2)
             {
                 player.transform.position = new Vector3(-1f, -2f, 0f);
-                Debug.Log($"👤 CLIENT spawning at LEFT (-1, -2)");
+                Debug.Log($"👤 CLIENT spawning at LEFT (-1.5, -2)");
             }
 
-            // ---------- ROTATION (Y-axis flip) ----------
+            // ---------- FACING (flip sprite) ----------
+            Vector3 localScale = player.transform.localScale;
             if (i == 0) // Host faces LEFT (toward client)
-                player.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+                localScale.x = -Mathf.Abs(localScale.x);
             else        // Client faces RIGHT (toward host)
-                player.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                localScale.x = Mathf.Abs(localScale.x);
+            player.transform.localScale = localScale;
 
             // ---------- SPAWN ----------
             NetworkObject netObj = player.GetComponent<NetworkObject>();
